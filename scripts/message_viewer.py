@@ -5,7 +5,7 @@ from std_msgs.msg import String
 from derek_chat.msg import chat
 
 def callback(data):
-    rospy.loginfo(rospy.get_caller_id() + 'I heard %s', data.message.data)
+    rospy.loginfo('%s: %s', data.source_id.data, data.message.data)
 
 def listener():
 
